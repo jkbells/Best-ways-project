@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "SwiftAid",
+    "slug": "swiftaid",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0D47A1"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.swiftaid.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "SwiftAid needs your location to find nearby ambulances.",
+        "NSLocationAlwaysUsageDescription": "SwiftAid needs your location for real-time tracking during trips."
+      }
+    },
+    "android": {
+      "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#0D47A1" },
+      "package": "com.swiftaid.app",
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"]
+    },
+    "plugins": [
+      ["expo-location", {
+        "locationAlwaysAndWhenInUsePermission": "Allow SwiftAid to use your location for ambulance dispatch."
+      }]
+    ]
+  }
+}
